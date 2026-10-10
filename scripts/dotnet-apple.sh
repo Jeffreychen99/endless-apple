@@ -11,5 +11,5 @@ if [ ! -x "$DOTNET_ROOT/dotnet" ]; then
   exit 1
 fi
 # SDK resolution must use the Apple target's pinned global.json, not upstream .NET 8.
-cd "$ROOT/Apple/Endless.iOS"
+cd "$ROOT/ios/Endless.iOS"
 exec "$DOTNET_ROOT/dotnet" "$@"

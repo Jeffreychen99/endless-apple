@@ -7,7 +7,7 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-APP = ROOT / 'Apple/Endless.iOS/bin/Debug/net10.0-ios/iossimulator-arm64/Endless.iOS.app'
+APP = ROOT / 'ios/Endless.iOS/bin/Debug/net10.0-ios/iossimulator-arm64/Endless.iOS.app'
 ENV = dict(os.environ, DEVELOPER_DIR=os.environ.get('DEVELOPER_DIR', '/Applications/Xcode.app/Contents/Developer'))
 
 

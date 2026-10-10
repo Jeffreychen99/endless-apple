@@ -3,7 +3,7 @@
 ## Scope and continuity
 
 - Current active product is the native iPhone client for the current official Endless Online server. Mac client work is deferred unless the user explicitly resumes it. No Wine dependency.
-- Read `TODO.md` before continuing implementation. Work from its latest feedback/priorities and keep its status accurate. A checked initial implementation is not proof that later phone feedback is resolved.
+- Read `TODO.md` before continuing implementation. Work from its current priorities and keep its status accurate. Remove completed tasks and superseded feedback instead of accumulating checkpoint logs; use Git history for completed work and verification history. Keep concrete unverified behavior and blockers in TODO.md.
 - Do not install/update the physical phone without a user request for that update. Simulator checks are part of normal implementation.
 
 ## Required UI design references

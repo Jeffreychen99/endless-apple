@@ -10,9 +10,9 @@ if [ "$#" -ne 1 ]; then
 fi
 SIMULATOR_ID=$1
 RESULT="$ROOT/artifacts/ui-tests-$(date +%Y%m%d-%H%M%S).xcresult"
-scripts/dotnet-apple.sh build Endless.iOS.csproj -p:RuntimeIdentifier=iossimulator-arm64 --no-restore
-xcrun simctl install "$SIMULATOR_ID" Apple/Endless.iOS/bin/Debug/net10.0-ios/iossimulator-arm64/Endless.iOS.app
-xcodebuild test -project Apple/Endless.UITests/Endless.UITests.xcodeproj \
+scripts/dotnet-apple.sh build Endless.iOS.csproj -p:RuntimeIdentifier=iossimulator-arm64
+xcrun simctl install "$SIMULATOR_ID" ios/Endless.iOS/bin/Debug/net10.0-ios/iossimulator-arm64/Endless.iOS.app
+xcodebuild test -project ios/Endless.UITests/Endless.UITests.xcodeproj \
   -scheme EndlessUITests -destination "platform=iOS Simulator,id=$SIMULATOR_ID" \
   -derivedDataPath .local/ui-test-build -resultBundlePath "$RESULT" \
   -parallel-testing-enabled NO -collect-test-diagnostics never

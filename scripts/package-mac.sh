@@ -2,7 +2,7 @@
 # A local developer bundle; depends on this checkout's private .NET runtime.
 set -eu
 ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
-CLIENT="$ROOT/bin/Release/client/net8.0"
+CLIENT="$ROOT/reference/monogame/bin/Release/client/net8.0"
 APP="$ROOT/artifacts/Endless Apple.app"
 if [ ! -f "$CLIENT/EndlessClient.dll" ]; then
   echo 'Run scripts/build-mac.sh first.' >&2

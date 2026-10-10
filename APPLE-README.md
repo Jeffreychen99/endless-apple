@@ -25,11 +25,11 @@ NPC appearance and batched movement now render from the current 1,049-entry NPC 
 ### Headless development (no Device Hub)
 
 ```sh
-scripts/dotnet-local.sh run --project Apple/Endless.Probe -- \
+scripts/dotnet-local.sh run --project tools/Endless.Probe -- \
   --official --login-file ~/Desktop/creds.txt --enter-world \
   --assets .local/official --world-preview artifacts/world-155.png --json
 # Repeat graphics work offline, without additional sign-ins:
-scripts/dotnet-local.sh run --project Apple/Endless.Probe -- \
+scripts/dotnet-local.sh run --project tools/Endless.Probe -- \
   --render-map 155 --assets .local/official --world-preview artifacts/world-155.png
 ```
 
@@ -51,11 +51,11 @@ All SDKs, downloads, reference checkouts, generated assets, configuration and re
 ## Connection diagnostic
 
 ```sh
-scripts/dotnet-local.sh run --project Apple/Endless.Probe -- --help
+scripts/dotnet-local.sh run --project tools/Endless.Probe -- --help
 # Makes exactly one live initialization attempt, without account credentials:
-scripts/dotnet-local.sh run --project Apple/Endless.Probe -- --official --json
+scripts/dotnet-local.sh run --project tools/Endless.Probe -- --official --json
 # A compatible local classic server:
-scripts/dotnet-local.sh run --project Apple/Endless.Probe -- \
+scripts/dotnet-local.sh run --project tools/Endless.Probe -- \
   --host 127.0.0.1 --port 8078 --version 0.0.28 --dialect classic --json
 ```
 
@@ -77,7 +77,7 @@ The content compiler uses the local x64 .NET SDK and Rosetta because upstream Mo
 
 ## iPhone shell
 
-The iPhone target uses Xcode 27, an isolated .NET SDK 10.0.401, and iOS workload set 10.0.401.1 (Microsoft.iOS 27.0.10722). The desktop renderer continues using upstream's .NET 8 toolchain. `Apple/Endless.iOS/global.json` pins the modern SDK without changing the root SDK pin.
+The iPhone target uses Xcode 27, an isolated .NET SDK 10.0.401, and iOS workload set 10.0.401.1 (Microsoft.iOS 27.0.10722). The desktop renderer continues using upstream's .NET 8 toolchain. `ios/Endless.iOS/global.json` pins the modern SDK without changing the root SDK pin.
 
 ```sh
 # For a fresh checkout; installed in this workspace already:
@@ -103,7 +103,7 @@ The auditor only reads allowlisted asset types under data/gfx/sfx/mfx and emits 
 
 Resolve the live coordinate/movement mismatch, complete equipment/NPC rendering and map transfer, then verify walking and warps before designing the iPhone HUD. See the ordered gates in `docs/COMPATIBILITY.md`.
 
-The iPhone connection check now observes the official pre-login session for 45 seconds, answers synchronization and keepalive packets, and disconnects. Run the same check on Mac with `scripts/dotnet-local.sh run --project Apple/Endless.Probe -- --official --session-watch --json`. That connection check does not use credentials; sign-in is a separate action.
+The iPhone connection check now observes the official pre-login session for 45 seconds, answers synchronization and keepalive packets, and disconnects. Run the same check on Mac with `scripts/dotnet-local.sh run --project tools/Endless.Probe -- --official --session-watch --json`. That connection check does not use credentials; sign-in is a separate action.
 
 ### iPhone UI font/art prerequisites
 

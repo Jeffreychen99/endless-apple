@@ -4,7 +4,7 @@ Source inspection, October 9, 2026. This repository's desktop source describes t
 
 ## Login
 
-`EndlessClient/ControlSets/LoginPromptControlSet.cs` composes gfx001/2 with separate editable fields. The panel is at (266,291); fields at (402,322) and (402,358), 140 pixels wide. Text has four pixels of left padding, separate edge/interior/cursor artwork, ordered keyboard focus and Enter submission. Connect/Cancel use 91×29 regions of gfx001/15, at (361,389)/(453,389). Button states are separate atlas columns. A pending login task gates duplicate submissions.
+`reference/monogame/EndlessClient/ControlSets/LoginPromptControlSet.cs` composes gfx001/2 with separate editable fields. The panel is at (266,291); fields at (402,322) and (402,358), 140 pixels wide. Text has four pixels of left padding, separate edge/interior/cursor artwork, ordered keyboard focus and Enter submission. Connect/Cancel use 91×29 regions of gfx001/15, at (361,389)/(453,389). Button states are separate atlas columns. A pending login task gates duplicate submissions.
 
 Consequences: preserve a dark input interior with breathing room inside a real wood frame, and keep action lettering independent of target size. iPhone uses always-visible fields, Remember me at left and Connect at right. Desktop legacy input limits are not imposed on the current server.
 
@@ -12,13 +12,13 @@ Consequences: preserve a dark input interior with breathing room inside a real w
 
 ## Character selection
 
-`EndlessClient/UIControls/CharacterInfoPanel.cs` uses the complete 276×123 gfx001/11 image at (334,36+index×124). It does not stretch the decorated center. The name occupies (165,26,89,22); level starts at (29,99). A CharacterControl renders the real appearance; Login/Delete are separate controls at (161,57)/(161,85), with pending-task protection.
+`reference/monogame/EndlessClient/UIControls/CharacterInfoPanel.cs` uses the complete 276×123 gfx001/11 image at (334,36+index×124). It does not stretch the decorated center. The name occupies (165,26,89,22); level starts at (29,99). A CharacterControl renders the real appearance; Login/Delete are separate controls at (161,57)/(161,85), with pending-task protection.
 
 This explains the former mobile defect: nine-slicing the complete card distorted its painted portrait/name wells, seam positions and caption. The mobile card now retains one aspect ratio and overlays dynamic content in those original regions. Its portrait uses the existing feet-anchored renderer. Latest mobile preference intentionally replaces the desktop column with one centered card and previous/next arrows. Delete is omitted. Smaller splash artwork sits below.
 
 ## Gameplay shell
 
-`EndlessClient/HUD/Controls/HudBackgroundFrame.cs` assembles several original resources: gfx002/1 main frame, /21 top-left, /22 sidebar, /23 topbar. Topbar starts at (49,7), sidebar at (7,53), with a separate right strip at (629,53), plus explicit gap filling. The desktop effect comes from layered, naturally scaled edges, not one stretched brown background.
+`reference/monogame/EndlessClient/HUD/Controls/HudBackgroundFrame.cs` assembles several original resources: gfx002/1 main frame, /21 top-left, /22 sidebar, /23 topbar. Topbar starts at (49,7), sidebar at (7,53), with a separate right strip at (629,53), plus explicit gap filling. The desktop effect comes from layered, naturally scaled edges, not one stretched brown background.
 
 Mobile preserves stable world projection and control placement, adds tiled classic honey-wood perimeter strips and a transparent-centered control surround, and retains updated status sprites. Expanded menus overlay the world; opening one must not refit the camera. Further rounded-corner fidelity can reuse dedicated corner resources without stretching scene content.
 
@@ -33,7 +33,7 @@ Mobile preserves stable world projection and control placement, adds tiled class
 
 ## Custom Check Connection lettering
 
-Generated with the built-in image-generation tool, using the original gfx001/13 action sheet as a visual reference. This is custom matching lettering, not recovered EO artwork. Saved unchanged as `Apple/Endless.iOS/Assets/check-connection-lettering.png`, bundled on an original wood plaque. Graphic files remain ignored under the project asset policy.
+Generated with the built-in image-generation tool, using the original gfx001/13 action sheet as a visual reference. This is custom matching lettering, not recovered EO artwork. Saved unchanged as `ios/Endless.iOS/Assets/check-connection-lettering.png`, bundled on an original wood plaque. Graphic files remain ignored under the project asset policy.
 
 Prompt: “Create ONE small game UI lettering asset, transparent background, exact text 'Check Connection'. Match reference classic Endless Online hand-lettered fantasy bitmap menu words (Create Account, View Credits). Tall condensed brush-script letters, strongly leaning right, cream/pale yellow fill, thin black/dark-brown outline and dark offset shadow. Narrow chunky strokes, connected handwritten lowercase, capital C each word. Not modern sans/typeset italic. One horizontal line, tightly bounded modest transparent padding. NO wooden plaque/screws/additional text. Laid over actual original wooden button resource. Rough pixel-era edges and narrow expressive proportions.”
 

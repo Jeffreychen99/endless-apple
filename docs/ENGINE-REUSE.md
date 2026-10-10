@@ -4,11 +4,11 @@ Assessment: October 9, 2026. This is a source/dependency assessment, not a compl
 
 ## What is available
 
-The checkout is Ethan Moffat's MIT-licensed C# EndlessClient, an open-source implementation of Endless Online. It is not the source of the current official Windows executable. `README.md` identifies the upstream project. The downloaded official client is an executable plus assets under ignored `.local/official`.
+This independent Apple repository retains Ethan Moffat's MIT-licensed C# EndlessClient under ignored `reference/monogame/` as an optional local implementation reference. It is not the source of the current official Windows executable. `README.md` identifies the upstream project. The downloaded official client is an executable plus assets under ignored `.local/official`.
 
 Desktop `EndlessClient.csproj` targets .NET 8 and MonoGame on Windows/Linux/macOS. It depends on EOLib, resource managers, content pipeline, input/UI libraries and platform hosting. EOLib and EOLib.IO target netstandard2.0, making shared-library reuse worth investigating. Their target framework alone does not prove all dependencies/platform behavior work on iPhone.
 
-The iPhone target currently references only `Apple/Endless.Protocol` and `Apple/Endless.World`, with UIKit for controls and a separate CPU sprite renderer. Thus source sitting in the repository does not currently execute in the iPhone build. This split created avoidable duplication of rendering rules.
+The iPhone target currently references only `engine/apple/Endless.Protocol` and `engine/apple/Endless.World`, with UIKit for controls and a separate CPU sprite renderer. Thus source sitting in the repository does not currently execute in the iPhone build. This split created avoidable duplication of rendering rules.
 
 ## What genuinely differs
 
@@ -38,6 +38,6 @@ For each gameplay TODO: find desktop code first, record whether it can be reused
 
 ## Implemented first boundary
 
-Apple.World now compiles the original desktop `WeaponSpriteType.cs` directly as a linked source, using its swing/foreground/shooting constants. The wider sprite calculator still needs extraction; this small reuse does not imply engine migration. Current assets include completely blank Old Choppy strike frames. The mobile asset-aware fallback retains a nonempty wind-up (or standing pose) only when all weapon parts are empty; valid split frames keep desktop order. Exact thrown/projectile behavior remains unverified. Resource-visibility checks are cached, and world depth traversal uses a cursor instead of repeated list removal.
+Apple.World compiles a retained copy of the original desktop `WeaponSpriteType.cs` under `engine/apple/Endless.World/Desktop/`, using its swing/foreground/shooting constants. The wider sprite calculator still needs extraction; this small reuse does not imply engine migration. Current assets include completely blank Old Choppy strike frames. The mobile asset-aware fallback retains a nonempty wind-up (or standing pose) only when all weapon parts are empty; valid split frames keep desktop order. Exact thrown/projectile behavior remains unverified. Resource-visibility checks are cached, and world depth traversal uses a cursor instead of repeated list removal.
 
 Touch camera panning is a mobile input adaptation. `CameraPan` uses the inverse of the existing 64×32 `WorldCamera` projection and leaves actor/server coordinates untouched; it does not introduce a second projection or alter desktop render rules. The offset is snapshotted before the render worker, and picking uses the camera that produced the displayed frame.

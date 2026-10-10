@@ -7,7 +7,7 @@ from PIL import Image
 from fontTools.fontBuilder import FontBuilder
 from fontTools.pens.ttGlyphPen import TTGlyphPen
 root = Path(__file__).resolve().parents[1]
-source = root / 'Apple/SourceAssets/BitmapFonts'
+source = root / 'engine/apple/SourceAssets/BitmapFonts'
 font = ET.parse(source / 'sans_11px.fnt').getroot()
 atlas = Image.open(source / 'sans_11px_0.png').convert('RGBA')
 scale = 64

@@ -4,13 +4,13 @@ An iPhone-first Endless Online client built with C#/.NET and UIKit. Mac Catalyst
 
 ## Layout
 
-- `Apple/Endless.iOS`: iPhone UI, controls and application lifecycle.
-- `Apple/Endless.Protocol` and `Apple/Endless.World`: current-server protocol, state and rendering.
-- `Apple/Endless.Protocol.Tests` and `Apple/Endless.UITests`: offline and simulator checks.
-- `Apple/Endless.Mac`: experimental Catalyst host; currently shares iPhone UI source.
+- `ios/Endless.iOS`: iPhone UI, controls and application lifecycle.
+- `engine/apple/Endless.Protocol` and `engine/apple/Endless.World`: current-server protocol, state and rendering.
+- `engine/apple/Endless.Protocol.Tests` and `ios/Endless.UITests`: offline and simulator checks.
+- `mac/Endless.Mac`: experimental Catalyst host; currently shares iPhone UI source.
 - `docs`, `scripts`, `TODO.md`: design references, tooling and current implementation status.
 
-The proposed engine/iOS/Mac directory migration has not yet been applied.
+The engine is currently C#/.NET; this layout does not imply a Swift rewrite. iPhone and Catalyst reference the same engine projects. Catalyst still temporarily compiles iPhone UI source and is not yet an independent Mac interface.
 
 ## Development
 
@@ -20,6 +20,6 @@ Game archives, maps, fonts generated during setup, package caches, screenshots a
 
 ## Desktop reference and attribution
 
-The full [Ethan Moffat EndlessClient](https://github.com/ethanmoffat/EndlessClient) MonoGame source is excluded from this repository. An existing local checkout can remain alongside Apple projects as an ignored reference. Legacy MonoGame build/run scripts require that optional source and are not Apple build prerequisites.
+The full [Ethan Moffat EndlessClient](https://github.com/ethanmoffat/EndlessClient) MonoGame source is excluded from this repository. The existing local checkout is retained under ignored `reference/monogame/`. Legacy MonoGame build/run scripts require that optional source and are not Apple build prerequisites.
 
-The Apple build retains a small sprite enum and bitmap-font source extracted from that client, with the upstream MIT notice in [LICENSE](LICENSE). See [source attribution](Apple/SourceAssets/README.md). Original game artwork is not covered by that source-code license.
+The Apple build retains a small sprite enum and bitmap-font source extracted from that client, with the upstream MIT notice in [LICENSE](LICENSE). See [source attribution](engine/apple/SourceAssets/README.md). Original game artwork is not covered by that source-code license.

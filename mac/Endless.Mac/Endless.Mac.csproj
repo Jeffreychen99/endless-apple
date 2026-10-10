@@ -11,11 +11,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-  <ItemGroup><BundleResource Include="../Endless.iOS/Assets/attack-sword-crop.png" Link="Assets/attack-sword-crop.png" /></ItemGroup>
-  <ItemGroup><Compile Include="../Endless.iOS/*.cs" Link="%(Filename)%(Extension)" /></ItemGroup>
-  <ItemGroup><ProjectReference Include="../Endless.Protocol/Endless.Protocol.csproj" /></ItemGroup>
+  <ItemGroup><BundleResource Include="../../ios/Endless.iOS/Assets/attack-sword-crop.png" Link="Assets/attack-sword-crop.png" /></ItemGroup>
+  <ItemGroup><Compile Include="../../ios/Endless.iOS/*.cs" Link="%(Filename)%(Extension)" /></ItemGroup>
+  <ItemGroup><ProjectReference Include="../../engine/apple/Endless.Protocol/Endless.Protocol.csproj" /></ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="../Endless.World/Endless.World.csproj" />
+    <ProjectReference Include="../../engine/apple/Endless.World/Endless.World.csproj" />
     <BundleResource Include="../../.local/official/data/pub/dat_items*.epf" Link="WorldAssets/data/pub/%(Filename)%(Extension)" />
     <BundleResource Include="../../.local/official/data/pub/dat_npcs*.epf" Link="WorldAssets/data/pub/%(Filename)%(Extension)" />
     <BundleResource Include="../../.local/official/gfx/gfx024.egf" Link="WorldAssets/gfx/gfx024.egf" />

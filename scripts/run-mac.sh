@@ -2,7 +2,7 @@
 # Runs the classic desktop baseline. This is NOT current official-server compatibility.
 set -eu
 ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
-CLIENT="$ROOT/bin/Release/client/net8.0"
+CLIENT="$ROOT/reference/monogame/bin/Release/client/net8.0"
 if [ ! -f "$CLIENT/EndlessClient.dll" ]; then
   echo 'Run scripts/build-mac.sh first.' >&2
   exit 1

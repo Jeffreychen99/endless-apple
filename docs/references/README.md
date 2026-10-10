@@ -42,7 +42,7 @@ Reference screenshots are intentionally ignored by Git. They remain on this deve
 
 All eleven PNGs in this library are user-provided reference captures, including the previously saved character-selection image. Preserve originals. Record any future crops separately and describe their use. Never copy the sample names, messages, item quantities or account-field text into fixtures or live UI.
 
-The separately approved attack sword crop is at `../../Apple/Endless.iOS/Assets/attack-sword-crop.png`. Reuse it; do not regenerate a lookalike.
+The separately approved attack sword crop is at `../../ios/Endless.iOS/Assets/attack-sword-crop.png`. Reuse it; do not regenerate a lookalike.
 
 ## Gameplay video research
 

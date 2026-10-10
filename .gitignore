@@ -323,8 +323,8 @@ DerivedData/
 # Existing upstream content is required by its content-pipeline manifests.
 
 
-!/Apple/Endless.iOS/Assets/attack-sword-crop.png
-!/Apple/Endless.iOS/Assets.xcassets/AppIcon.appiconset/AppIcon.png
+!/ios/Endless.iOS/Assets/attack-sword-crop.png
+!/ios/Endless.iOS/Assets.xcassets/AppIcon.appiconset/AppIcon.png
 
 # Local upstream MonoGame reference, not part of the Apple repository.
 /EndlessClient/
@@ -338,9 +338,9 @@ DerivedData/
 /.vscode/
 
 # Small required build inputs; screenshots/archives remain ignored.
-!/Apple/SourceAssets/BitmapFonts/sans_11px_0.png
-!/Apple/Endless.iOS/Assets/paperdoll-lettering-refined.png
-!/Apple/Endless.iOS/Assets/check-connection-lettering.png
+!/engine/apple/SourceAssets/BitmapFonts/sans_11px_0.png
+!/ios/Endless.iOS/Assets/paperdoll-lettering-refined.png
+!/ios/Endless.iOS/Assets/check-connection-lettering.png
 
 # Local credentials and signing material.
 .env

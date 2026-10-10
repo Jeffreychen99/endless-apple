@@ -22,9 +22,9 @@
     <BundleResource Include="../../packages/endlessclient.binaries/1.4.0.2/build/net462/client/gfx/gfx002.egf" Link="WorldAssets/classic/gfx002.egf" />
   </ItemGroup>
   <ItemGroup><ImageAsset Include="Assets.xcassets/**/*" /></ItemGroup>
-  <ItemGroup><ProjectReference Include="../Endless.Protocol/Endless.Protocol.csproj" /></ItemGroup>
+  <ItemGroup><ProjectReference Include="../../engine/apple/Endless.Protocol/Endless.Protocol.csproj" /></ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="../Endless.World/Endless.World.csproj" />
+    <ProjectReference Include="../../engine/apple/Endless.World/Endless.World.csproj" />
     <BundleResource Include="../../.local/official/data/pub/dat_items*.epf" Link="WorldAssets/data/pub/%(Filename)%(Extension)" />
     <BundleResource Include="../../.local/official/data/pub/dat_npcs*.epf" Link="WorldAssets/data/pub/%(Filename)%(Extension)" />
     <BundleResource Include="../../.local/official/gfx/gfx024.egf" Link="WorldAssets/gfx/gfx024.egf" />

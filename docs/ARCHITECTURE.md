@@ -2,10 +2,10 @@
 
 Keep the existing C#/MonoGame client as a reference and desktop baseline. Current Recharged support must be a separate adapter; do not silently replace the classic packet types with guessed fields.
 
-- `Apple/Endless.Protocol`: dependency-free .NET 8 framing, initialization, strict response parsing and cancellation. Shared by the command-line probe and iPhone shell.
-- `Apple/Endless.Probe`: explicit one-shot network diagnostic. No login feature, automatic retries or network access on launch without an action.
-- `Apple/Endless.Protocol.Tests`: offline wire-format and stream-fragmentation regression runner.
-- `Apple/Endless.iOS`: UIKit login shell sharing the protocol layer. Account fields stay disabled; connection checks report reply code, size and elapsed time. rendering and authentication are intentionally pending compatibility evidence. It is not yet a playable port.
+- `engine/apple/Endless.Protocol`: dependency-free .NET 8 framing, initialization, strict response parsing and cancellation. Shared by the command-line probe and iPhone shell.
+- `tools/Endless.Probe`: explicit one-shot network diagnostic. No login feature, automatic retries or network access on launch without an action.
+- `engine/apple/Endless.Protocol.Tests`: offline wire-format and stream-fragmentation regression runner.
+- `ios/Endless.iOS`: UIKit login shell sharing the protocol layer. Account fields stay disabled; connection checks report reply code, size and elapsed time. rendering and authentication are intentionally pending compatibility evidence. It is not yet a playable port.
 - `EndlessClient`: upstream desktop gameplay/rendering, with an optional portable DesktopGL Mac build.
 
 Next extract platform-independent game state and commands from the desktop controllers, then attach touch and keyboard input to the same command layer. Avoid a hosted proxy. Keep credentials in platform secure storage only after authentication is understood; never in profiles, diagnostics, arguments or backups. Treat server data as untrusted and bound every length before allocation.

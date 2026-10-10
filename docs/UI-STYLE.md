@@ -100,7 +100,7 @@ Paths below are local source resources, not permission to commit/distribute the 
 | gfx001 graphics 2, 11, 13, 14, 19, 23 | Login/character panels, button sheets and frame resources; inspect for intended role |
 | `.local/official/gfx/gfx002.egf` | Gameplay HUD resources |
 | gfx002 graphics 1, 28, 50, 51, 58 | Viewport frame, wood, buttons, panel frame and updated status tracks |
-| `Apple/Endless.iOS/Assets/attack-sword-crop.png` | User-approved exact sword crop |
+| `ios/Endless.iOS/Assets/attack-sword-crop.png` | User-approved exact sword crop |
 
 Record archive/graphic/crop and any transformation near the asset code when adding a resource. Reuse shared rendering/components where the visual rules are shared.
 
@@ -112,7 +112,7 @@ Compare the actual rendered result with the saved reference and the applicable s
 
 Two distinct roles are required: cream/light-yellow, dark-edged cursive bitmap titles/actions; upright pixel body text for names, levels, credentials, chat and values. Do not substitute Georgia or system sans as the permanent style. Original classic resources are available in `packages/endlessclient.binaries/1.4.0.2/build/net462/client/gfx`: gfx001/15 has Login/Delete, gfx001/11 has Character, gfx001/13 has View Credits. Use lettering without stretching its aspect ratio. Original classic gfx002 provides the requested brighter orange wood; current gfx002/58 remains the status sprite source.
 
-The repository's `EndlessClient/ContentPipeline/BitmapFonts/sans_11px` atlas is an un-smoothed Microsoft Sans Serif bitmap font. `scripts/build-ui-font.py` adapts those existing glyph pixels to local native outlines for UIKit input, maintaining the pixel shapes; this is a desktop-repository source, not a claim of recovering the current official binary's embedded font. Generated font resides in ignored `.local/ui-fonts`. Prefer whole/half pixel multiples and verify readability on device.
+The repository's `reference/monogame/EndlessClient/ContentPipeline/BitmapFonts/sans_11px` atlas is an un-smoothed Microsoft Sans Serif bitmap font. `scripts/build-ui-font.py` adapts those existing glyph pixels to local native outlines for UIKit input, maintaining the pixel shapes; this is a desktop-repository source, not a claim of recovering the current official binary's embedded font. Generated font resides in ignored `.local/ui-fonts`. Prefer whole/half pixel multiples and verify readability on device.
 
 Unrecovered/dynamic decorative labels use [Carter One](https://github.com/google/fonts/tree/main/ofl/carterone), cream with a dark outline, as a documented approximation. Recovered Connect/View Credits/Character/Login/Delete/Back sprites always take precedence. Carter One is bundled with its OFL notice; it is not represented as EO's original font.
 
