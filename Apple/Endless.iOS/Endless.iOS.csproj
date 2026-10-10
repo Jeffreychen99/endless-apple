@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-ios</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <SupportedOSPlatformVersion>15.0</SupportedOSPlatformVersion>
+    <ApplicationId>dev.endlessapple.client</ApplicationId>
+    <ApplicationTitle>Endless Apple</ApplicationTitle>
+    <ApplicationVersion>1</ApplicationVersion>
+    <ApplicationDisplayVersion>0.1.0</ApplicationDisplayVersion>
+    <AppIcon>AppIcon</AppIcon>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup><BundleResource Include="Assets/attack-sword-crop.png" />
+    <BundleResource Include="Assets/paperdoll-lettering-refined.png" />
+    <BundleResource Include="Assets/check-connection-lettering.png" />
+    <BundleResource Include="../../.local/ui-fonts/EODesktopPixel.ttf" Link="Fonts/EODesktopPixel.ttf" />
+    <BundleResource Include="../../.local/ui-fonts/CarterOne.ttf" Link="Fonts/CarterOne.ttf" />
+    <BundleResource Include="../../.local/ui-fonts/CarterOne-OFL.txt" Link="Fonts/CarterOne-OFL.txt" />
+    <PartialAppManifest Include="Fonts.plist" />
+    <BundleResource Include="../../packages/endlessclient.binaries/1.4.0.2/build/net462/client/gfx/gfx001.egf" Link="WorldAssets/classic/gfx001.egf" />
+    <BundleResource Include="../../packages/endlessclient.binaries/1.4.0.2/build/net462/client/gfx/gfx002.egf" Link="WorldAssets/classic/gfx002.egf" />
+  </ItemGroup>
+  <ItemGroup><ImageAsset Include="Assets.xcassets/**/*" /></ItemGroup>
+  <ItemGroup><ProjectReference Include="../Endless.Protocol/Endless.Protocol.csproj" /></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Endless.World/Endless.World.csproj" />
+    <BundleResource Include="../../.local/official/data/pub/dat_items*.epf" Link="WorldAssets/data/pub/%(Filename)%(Extension)" />
+    <BundleResource Include="../../.local/official/data/pub/dat_npcs*.epf" Link="WorldAssets/data/pub/%(Filename)%(Extension)" />
+    <BundleResource Include="../../.local/official/gfx/gfx024.egf" Link="WorldAssets/gfx/gfx024.egf" />
+    <BundleResource Include="../../.local/official/gfx/gfx006.egf" Link="WorldAssets/gfx/gfx006.egf" />
+    <BundleResource Include="../../.local/official/gfx/gfx002.egf" Link="WorldAssets/gfx/gfx002.egf" />
+    <BundleResource Include="../../.local/official/gfx/gfx001.egf" Link="WorldAssets/gfx/gfx001.egf" />
+    <BundleResource Include="../../.local/official/gfx/gfx003.egf" Link="WorldAssets/gfx/gfx003.egf" />
+    <!-- Local development assets only: not checked in or downloaded during builds. -->
+    <BundleResource Include="../../.local/official/data/maps/*.emf" Link="WorldAssets/data/maps/%(Filename)%(Extension)" />
+    <BundleResource Include="../../.local/official/gfx/gfx004.egf" Link="WorldAssets/gfx/gfx004.egf" />
+    <BundleResource Include="../../.local/official/gfx/gfx005.egf" Link="WorldAssets/gfx/gfx005.egf" />
+    <BundleResource Include="../../.local/official/gfx/gfx007.egf" Link="WorldAssets/gfx/gfx007.egf" />
+    <BundleResource Include="../../.local/official/gfx/gfx008.egf" Link="WorldAssets/gfx/gfx008.egf" />
+    <BundleResource Include="../../.local/official/gfx/gfx009.egf" Link="WorldAssets/gfx/gfx009.egf" />
+    <BundleResource Include="../../.local/official/gfx/gfx010.egf" Link="WorldAssets/gfx/gfx010.egf" />
+    <BundleResource Include="../../.local/official/gfx/gfx026.egf" Link="WorldAssets/gfx/gfx026.egf" />
+    <BundleResource Include="../../.local/official/gfx/gfx025.egf" Link="WorldAssets/gfx/gfx025.egf" />
+    <BundleResource Include="../../.local/official/gfx/gfx011.egf" Link="WorldAssets/gfx/gfx011.egf" />
+    <BundleResource Include="../../.local/official/gfx/gfx012.egf" Link="WorldAssets/gfx/gfx012.egf" />
+    <BundleResource Include="../../.local/official/gfx/gfx013.egf" Link="WorldAssets/gfx/gfx013.egf" />
+    <BundleResource Include="../../.local/official/gfx/gfx014.egf" Link="WorldAssets/gfx/gfx014.egf" />
+    <BundleResource Include="../../.local/official/gfx/gfx015.egf" Link="WorldAssets/gfx/gfx015.egf" />
+    <BundleResource Include="../../.local/official/gfx/gfx016.egf" Link="WorldAssets/gfx/gfx016.egf" />
+    <BundleResource Include="../../.local/official/gfx/gfx017.egf" Link="WorldAssets/gfx/gfx017.egf" />
+    <BundleResource Include="../../.local/official/gfx/gfx018.egf" Link="WorldAssets/gfx/gfx018.egf" />
+    <BundleResource Include="../../.local/official/gfx/gfx019.egf" Link="WorldAssets/gfx/gfx019.egf" />
+    <BundleResource Include="../../.local/official/gfx/gfx020.egf" Link="WorldAssets/gfx/gfx020.egf" />
+    <BundleResource Include="../../.local/official/gfx/gfx021.egf" Link="WorldAssets/gfx/gfx021.egf" />
+    <BundleResource Include="../../.local/official/gfx/gfx022.egf" Link="WorldAssets/gfx/gfx022.egf" />
+    <BundleResource Include="../../.local/official/gfx/gfx023.egf" Link="WorldAssets/gfx/gfx023.egf" />
+  </ItemGroup>
+</Project>
