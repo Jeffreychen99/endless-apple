@@ -8,7 +8,8 @@ Follow [AGENTS.md](AGENTS.md), the [shared UI rules](docs/UI-STYLE.md), and the 
 
 - [ ] Retest Old Choppy on the physical iPhone in all directions: the current fallback retains wind-up art when strike resources are empty. Check body, clothing, weapon and back-item alignment together.
 - [ ] Investigate weapons with missing standing art in the mapped archive, including Lasergun; do not treat the Old Choppy fallback as coverage for them.
-- [ ] Verify live damage/hit feedback and ranged/special attack behavior, including projectiles. Successful attack writes and animations do not prove damage.
+- [ ] Implement monster combat feedback: health bars, damage numbers, death fade-out, and visible item/gold drops from server events. Review a short Endless Online combat video for presentation; verify actual damage separately from attack writes/animations.
+- [ ] Verify ranged/special attack behavior, including projectiles.
 - [ ] Verify sustained D-pad walking and tap routes on phone for smooth cadence, crowded collision, cancellation and server corrections.
 - [ ] Verify blocked-direction turning is observed by the server/other clients in all directions; local turning and a successful write are already covered.
 
@@ -16,8 +17,12 @@ Follow [AGENTS.md](AGENTS.md), the [shared UI rules](docs/UI-STYLE.md), and the 
 
 - [ ] Decode and display current stamina and EXP/TNL updates.
 - [ ] Complete mob/NPC movement, combat, disappearance and respawn lifecycle.
-- [ ] Implement server-confirmed doors/portals, map cache validation and transition scene reset.
+- [ ] Fix nonworking door/map-portal interactions and implement server-confirmed transitions, map cache validation and scene reset.
+- [ ] Repair malformed door visuals: inspect original door art, open/closed frames, offsets and layering against desktop references.
 - [ ] Route tapped NPCs/interactables into interaction range and dispatch the appropriate verified action: dialogue, chest, billboard or resource.
+- [ ] Tapping an NPC opens its dialogue textbox and supports server-confirmed quest acceptance; use the [NPC/quest video](https://www.youtube.com/watch?v=i1hUiv0Xas4) as a presentation reference.
+- [ ] Tapping another player opens a desktop-style options menu containing Paperdoll and Trade only; implement remote paperdoll inspection and trade request/accept/cancel/offer/confirmation flow with server-confirmed state. Reference: [player-options video](https://www.youtube.com/watch?v=MZIMvDcrDvE).
+- [ ] Rebuild self/other-player Paperdoll to match the [desktop screenshot](docs/references/desktop-paperdoll-layout-2026-10-10.png): silhouette-aligned equipment slots, original item art, recessed character-info fields, wood framing and pixel text, adapted for readable phone layout.
 - [ ] Display server chest contents; perform item actions only on explicit input.
 - [ ] Implement resource harvesting, including trees, tool requirements and original animations.
 - [ ] Complete inventory mutations and equip/unequip/use/drop actions with server-confirmed appearance/stat changes; Paperdoll is currently read-only.

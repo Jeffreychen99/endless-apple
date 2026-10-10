@@ -40,7 +40,7 @@ Reference screenshots are intentionally ignored by Git. They remain on this deve
 
 ## Asset provenance
 
-All eleven PNGs in this library are user-provided reference captures, including the previously saved character-selection image. Preserve originals. Record any future crops separately and describe their use. Never copy the sample names, messages, item quantities or account-field text into fixtures or live UI.
+The screenshots in this library are user-provided reference captures, including the character-selection images. Preserve originals. Record any future crops separately and describe their use. Never copy the sample names, messages, item quantities or account-field text into fixtures or live UI.
 
 The separately approved attack sword crop is at `../../ios/Endless.iOS/Assets/attack-sword-crop.png`. Reuse it; do not regenerate a lookalike.
 
@@ -67,3 +67,10 @@ The user supplied [login color defect](login-panel-color-2026-10-09.png), [float
 - `desktop-paperdoll-button.png`: requested original double-rim Paperdoll plaque.
 - `feedback-splash-frame-seam.png`: defect reference, figures crossing the painted bottom-band boundary.
 - `feedback-hud-status-wood.png`: defect reference; rounded corners belong at the screen top and the entire system-status region should be wood.
+
+## October 10 gameplay and Paperdoll references
+
+- [Desktop Paperdoll layout](desktop-paperdoll-layout-2026-10-10.png): original user screenshot, preserved unchanged. Target: silhouette-aligned equipment wells on the left; stacked recessed metadata fields on the right; thin layered wood borders, original item sprites and pixel text. Adapt the arrangement for phone readability. Sample player details are not application content. The image remains local and Git-ignored.
+- [Player options / Paperdoll / trade](https://www.youtube.com/watch?v=MZIMvDcrDvE): user-supplied presentation reference to review during implementation. Requested menu scope is Paperdoll and Trade only.
+- [NPC dialogue and quests](https://www.youtube.com/watch?v=i1hUiv0Xas4): user-supplied presentation reference to review during implementation, including quest acceptance.
+- Video behavior has not been verified from playback in this documentation update. Record timestamped observations when reviewed; do not infer current-server packet formats from video. A short combat reference still needs selection for health bars, damage, death fade and drops.

@@ -88,3 +88,9 @@ Broad status and home-indicator fills use the quiet original gfx002/28 interior,
 Latest revision: omit the decorative sword. Paperdoll shares the ordinary amber navigation plaque, with a conservatively refined version of its original lettering (`Assets/paperdoll-lettering-refined.png`, image-generation edit of classic gfx002/27 crop 51,388,65,13). This is not a new font or an exact untouched desktop asset. Inventory and Quest icons retain dark outlines over transparent backgrounds.
 
 One-finger drag pans the world; two-finger pinch zooms. Neither changes HUD bounds or moves the player. Attack resets the offset and resumes centered follow. Drawers preserve the current camera.
+
+## Paperdoll and player interactions
+
+The [October 10 Paperdoll reference](references/desktop-paperdoll-layout-2026-10-10.png) establishes equipment wells arranged around a subtle body silhouette, with original item sprites and a neighboring stack of dark recessed character-information fields. Preserve thin layered amber borders and pixel body text; adapt sizing and scrolling for iPhone rather than shrinking the desktop panel wholesale. Use actual server data and never copy sample player details. Self and inspected-player Paperdolls should share this presentation.
+
+Tapping another player opens a wood-framed options menu; current scope is **Paperdoll** and **Trade**. NPC taps open the appropriate original-style dialogue and quest-response interface. Combat feedback should include monster health, damage numbers, death fade and visible server-reported drops without obscuring the world. These are requested targets, not implemented-feature claims; see TODO.md and the [reference index](references/README.md).
